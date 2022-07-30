@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+form {
+    width: 400px;
+    margin: 30px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+form > div {
+    padding: 10px 0;
+}
+form input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+form input[type="radio"]:checked + label::after,
+form input[type="radio"]:not(:checked):hover + label::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    left: 4px;
+}
+form input[type="radio"]:checked + label::after {
+    background-color: #0075ff;
+}
+form input[type="radio"]:not(:checked):hover + label::after {
+    background-color: #0075ff;
+    opacity: 0.2;
+}
+form label {
+    position: relative;
+    padding: 0px 0px 0px 25px;
+}
+form label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 1px solid #0075ff;
+}
